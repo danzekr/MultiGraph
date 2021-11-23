@@ -1,0 +1,3 @@
+include ':multigraph'
+include ':app'
+rootProject.name = "MultiMap"

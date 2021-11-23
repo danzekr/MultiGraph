@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MultiGraph">
+        <attr name="maxPatchCount" format="integer" />
+        <attr name="gapSize" format="dimension" />
+        <attr name="mode" format="enum">
+            <enum name="AVATAR" value="1" />
+            <enum name="FILL" value="2" />
+        </attr>
+        <attr name="defaultResource" format="dimension" />
+    </declare-styleable>
+</resources>

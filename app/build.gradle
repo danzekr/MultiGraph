@@ -1,0 +1,23 @@
+apply from: './../config.gradle'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    buildToolsVersion buidConfig.buildToolsVersion
+    compileSdkVersion buidConfig.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.danzekr.multimap"
+        minSdkVersion buidConfig.minSdkVersion
+        targetSdkVersion buidConfig.targetSdkVersion
+        versionCode buidConfig.versionCode
+        versionName buidConfig.versionName
+    }
+}
+
+dependencies {
+    implementation dependent.kotlinJdk7
+    implementation dependent.appcompat
+    implementation dependent.constraintlayout
+    api project(path: ':multigraph')
+}
