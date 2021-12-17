@@ -1,4 +1,4 @@
-package com.danzekr.multimap
+package com.iwdael.multimap
 
 /**
  * author : 段泽全(hacknife)

@@ -1,9 +1,8 @@
-package com.danzekr.multimap
+package com.iwdael.multimap
 
 import android.content.Context
 import android.graphics.Rect
 import android.util.AttributeSet
-import android.util.Log
 import android.view.ViewGroup
 import android.widget.ImageView
 import java.lang.Integer.min

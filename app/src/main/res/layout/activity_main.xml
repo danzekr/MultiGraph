@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.danzekr.multimap.MultiGraph
+    <com.iwdael.multimap.MultiGraph
         android:id="@+id/map"
         android:layout_width="300dp"
         android:layout_height="300dp"

@@ -1,6 +1,5 @@
-package com.danzekr.multimap
+package com.iwdael.multimap
 
-import android.util.Log
 import android.widget.ImageView
 
 /**
@@ -12,7 +11,6 @@ import android.widget.ImageView
  */
 class DefaultMapLoader : MapLoader {
     override fun load(view: ImageView, data: Any) {
-//        Log.v("dzq", "load:${view} into :${data}")
         view.setImageResource(data as Int)
     }
 }

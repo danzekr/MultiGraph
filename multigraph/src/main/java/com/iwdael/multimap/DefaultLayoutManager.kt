@@ -1,4 +1,4 @@
-package com.danzekr.multimap
+package com.iwdael.multimap
 
 class DefaultLayoutManager : LayoutManager {
     override fun layout(mode: Mode, patch: Patch, maxPatchCount: Int, patchCount: Int, gab: Int, index: Int, left: Int, top: Int, right: Int, bottom: Int) {

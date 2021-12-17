@@ -1,10 +1,9 @@
-package com.danzekr.multimap
+package com.iwdael.multimap
 
 import android.graphics.Rect
-import android.util.Size
 import android.widget.ImageView
 
-class Patch(val rect: Rect, val view: ImageView,   call: (ImageView) -> Unit = {}) {
+class Patch(val rect: Rect, val view: ImageView, call: (ImageView) -> Unit = {}) {
     init {
         view.setOnClickListener { call.invoke(view) }
     }

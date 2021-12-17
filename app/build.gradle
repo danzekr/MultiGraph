@@ -7,7 +7,7 @@ android {
     compileSdkVersion buidConfig.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.danzekr.multimap"
+        applicationId "com.iwdael.multigraph.example"
         minSdkVersion buidConfig.minSdkVersion
         targetSdkVersion buidConfig.targetSdkVersion
         versionCode buidConfig.versionCode

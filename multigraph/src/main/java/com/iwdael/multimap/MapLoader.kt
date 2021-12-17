@@ -1,4 +1,4 @@
-package com.danzekr.multimap
+package com.iwdael.multimap
 
 import android.widget.ImageView
 
