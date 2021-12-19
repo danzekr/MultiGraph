@@ -11,6 +11,5 @@ import android.widget.ImageView
  */
 class DefaultMapLoader : MapLoader {
     override fun load(view: ImageView, data: Any) {
-        view.setImageResource(data as Int)
     }
 }
