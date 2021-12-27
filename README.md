@@ -1,6 +1,6 @@
 # MultiGraph
 ![](https://img.shields.io/badge/platform-android-orange.svg)
-![](https://img.shields.io/badge/language-java-yellow.svg)
+![](https://img.shields.io/badge/language-kotlin-yellow.svg)
 ![](https://jitpack.io/v/com.iwdael/multigraph.svg)
 ![](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![](https://img.shields.io/badge/license-apache--2.0-green.svg)
