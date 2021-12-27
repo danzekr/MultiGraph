@@ -31,7 +31,7 @@ open class MultiGraph(context: Context, attrs: AttributeSet?) : ViewGroup(contex
     private var mode = Mode.AVATAR
     private var onMapClickListener: ((ImageView, Any, Int) -> Unit)? = null
 
-    fun setOnMapClickListener(l: ((view: ImageView, data: Any, index: Int) -> Unit)) {
+    fun setOnGraphClickListener(l: ((view: ImageView, data: Any, index: Int) -> Unit)) {
         this.onMapClickListener = l
     }
 

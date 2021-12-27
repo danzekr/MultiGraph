@@ -7,7 +7,6 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.iwdael.multigraph.MultiGraph
 import com.iwdael.multigraph.MultiGraphLoader
-import com.iwdael.multigraph.example.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.map,
                 R.drawable.map
         ))
-        map.setOnMapClickListener { view, data, index ->
+        map.setOnGraphClickListener { view, data, index ->
             Log.v("dzq", "view:${view}, data:${data}, index:${index}")
         }
     }
