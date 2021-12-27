@@ -1,14 +1,23 @@
-package com.iwdael.multimap
+package com.iwdael.multigraph.example
 
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.iwdael.multigraph.MultiGraph
+import com.iwdael.multigraph.MultiGraphLoader
+import com.iwdael.multigraph.example.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        MultiGraph.defaultMultiGraphLoader = object :MultiGraphLoader{
+            override fun load(view: ImageView, data: Any) {
+                view.setImageResource(data as Int)
+            }
+        }
         setContentView(R.layout.activity_main)
         map.setData(arrayOf(
                 R.drawable.map,

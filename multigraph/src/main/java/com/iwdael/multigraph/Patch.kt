@@ -1,4 +1,4 @@
-package com.iwdael.multimap
+package com.iwdael.multigraph
 
 import android.graphics.Rect
 import android.widget.ImageView

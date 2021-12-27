@@ -1,20 +1,24 @@
-package com.iwdael.multimap
+package com.iwdael.multigraph
 
 import android.content.Context
 import android.graphics.Rect
 import android.util.AttributeSet
 import android.view.ViewGroup
 import android.widget.ImageView
-import java.lang.Integer.min
 
 /**
- * author : 段泽全(hacknife)
- * e-mail : hacknife@outlook.com
+ * author : Iwdael
+ * e-mail : iwdael@outlook.com
  * time   : 2019/8/5
  * desc   : multiGraph
  * version: 1.0
  */
 open class MultiGraph(context: Context, attrs: AttributeSet?) : ViewGroup(context, attrs) {
+    companion object {
+        var defaultMultiGraphLoader: MultiGraphLoader = DefaultMultiGraphLoader()
+        var defaultLayoutManager: LayoutManager = DefaultLayoutManager()
+    }
+
     private val maxPatchCount: Int
     private val gapSize: Int
     private val defaultResource: Int
@@ -25,8 +29,6 @@ open class MultiGraph(context: Context, attrs: AttributeSet?) : ViewGroup(contex
     private var cachePatches = mutableMapOf<Int, Patch>()
     private var dataSet = mutableListOf<Any>()
     private var mode = Mode.AVATAR
-    open var layoutManager: LayoutManager = DefaultLayoutManager()
-    open var mapLoader: MapLoader = DefaultMapLoader()
     private var onMapClickListener: ((ImageView, Any, Int) -> Unit)? = null
 
     fun setOnMapClickListener(l: ((view: ImageView, data: Any, index: Int) -> Unit)) {
@@ -59,7 +61,7 @@ open class MultiGraph(context: Context, attrs: AttributeSet?) : ViewGroup(contex
     fun setData(data: Array<Any>) {
         this.dataSet.clear()
         this.dataSet.addAll(data)
-        dispatchPatch(min(this.dataSet.size, maxPatchCount))
+        dispatchPatch(Math.min(this.dataSet.size, maxPatchCount))
         layoutChildrenView()
     }
 
@@ -68,7 +70,7 @@ open class MultiGraph(context: Context, attrs: AttributeSet?) : ViewGroup(contex
         for (index in 0 until childrenCount) {
             val path = createPatch(index)
             path.layout()
-            mapLoader.load(path.view, dataSet[index])
+            defaultMultiGraphLoader.load(path.view, dataSet[index])
         }
     }
 
@@ -80,7 +82,7 @@ open class MultiGraph(context: Context, attrs: AttributeSet?) : ViewGroup(contex
             removeViews(newCount, oldCount - newCount)
         }
         for (index in 0 until newCount) {
-            layoutManager.layout(mode, createPatch(index), maxPatchCount, newCount, gapSize, index, patchesLeft, patchesTop, patchesRight, patchesBottom)
+            defaultLayoutManager.layout(mode, createPatch(index), maxPatchCount, newCount, gapSize, index, patchesLeft, patchesTop, patchesRight, patchesBottom)
         }
     }
 
